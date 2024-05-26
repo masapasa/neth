@@ -1,11 +1,13 @@
-Below is a detailed technical explanation of Solidity smart contract code for a cross-chain tokenized real estate platform.
+Solidity smart contract code for a cross-chain tokenized real estate platform.
+
 ### Overview
-The smart contract named `xRealEstateNFT` is designed to tokenize real estate assets using NFTs (non-fungible tokens) and facilitate cross-chain transfers of these NFTs. This contract integrates several advanced features and libraries to provide robust functionality, including:
+The smart contract named `xRealEstateNFT` Neth is designed to tokenize real estate assets using NFTs (non-fungible tokens) and facilitate cross-chain transfers of these NFTs. This contract integrates several advanced features and libraries to provide robust functionality, including:
 - ERC721 standard from OpenZeppelin for NFT implementation.
 - Chainlink's Cross-Chain Interoperability Protocol (CCIP) for cross-chain messaging.
 - Chainlink's FunctionsClient for off-chain data retrieval and computation.
 - SafeERC20 operations for secure token transfers.
 - ReentrancyGuard for reentrancy protection.
+
 ### Imports
 Several libraries and contracts are imported to extend and enhance functionalities:
 ```solidity
@@ -25,6 +27,7 @@ import {FunctionsRequest} from "@chainlink/contracts/src/v0.8/functions/v1_0_0/l
 import {Base64} from "@openzeppelin/contracts/utils/Base64.sol";
 import {FunctionsSource} from "./FunctionsSource.sol";
 ```
+
 ### Contract Declaration
 The contract `xRealEstateNFT` inherits from multiple base contracts to assemble the desired functionality.
 ```solidity
@@ -40,6 +43,7 @@ contract xRealEstateNFT is
     using FunctionsRequest for FunctionsRequest.Request;
     using SafeERC20 for IERC20;
 ```
+
 ### State Variables
 Various state variables are defined to hold essential information for the contract's operations:
 - **Enums and Errors**: `PayFeesIn` enum specifies the fee payment mode. Custom errors are declared for handling various exceptional cases.
